@@ -42,9 +42,7 @@ console.log('As a one-liner:', oneLiner('Code 301'));
 // STEP 5
 // What if we have multiple parameters?
 // In a function expression, they all go in the parentheses
-const add = function(num1, num2) {
-  return `${num1} + ${num2} = ${num1 + num2}`;
-};
+const add = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Let\'s do some math:', add(4, 5));
@@ -74,13 +72,11 @@ console.log('Multi-line arrow function:', multiLiner('hello'));
 // STEP 8
 // The way an object is returned is different with an arrow function, too.
 // Here is how we return an object without arrow functions
-const oldObject = function(array) {
-  return {
+const oldObject = array({
     firstValue: array[0],
     secondValue: array[1],
     thirdValue: array[2]
-  };
-};
+  });
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
@@ -114,13 +110,11 @@ let sum = (a, b, c, d) => a + b + c + d;
  console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
+let objectLit = keyValue => ({
     key1: 'value1',
     key2: 'value2',
     key3: 'value3',
-  };
-};
+  });
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
@@ -136,9 +130,7 @@ let sumAndProduct = function(a, b) {
 console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
-  return `Hello, ${name}!`;
-};
+let message = name => `Hello, ${name}!`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(message('Allie'));
