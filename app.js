@@ -2,9 +2,7 @@
 
 // STEP 1
 // This is a standard function expression. You may also be familiar with function declarations, which begin with the "function" keyword.
-const theOldWay = function(course) {
-  return `I am currently enrolled in ${course}`;
-};
+const theOldWay = course => `I am currently enrolled in ${course}`
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log('The old way:', theOldWay('Code 301'));
